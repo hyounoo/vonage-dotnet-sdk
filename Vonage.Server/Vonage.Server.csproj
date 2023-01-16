@@ -5,6 +5,7 @@
         <TargetFramework>netstandard2.0</TargetFramework>
         <LangVersion>10</LangVersion>
         <Nullable>disable</Nullable>
+        <NetStandardImplicitPackageVersion>2.0.0</NetStandardImplicitPackageVersion>
         <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
         <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
         <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
@@ -34,6 +35,7 @@
         <AssemblyName>Vonage.Server</AssemblyName>
         <RootNamespace>Vonage.Server</RootNamespace>
         <Product>Vonage.Server</Product>
+        <DefineConstants>LIBLOG_PORTABLE</DefineConstants>
     </PropertyGroup>
     <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
         <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
