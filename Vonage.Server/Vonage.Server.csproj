@@ -35,25 +35,17 @@
         <RootNamespace>Vonage.Server</RootNamespace>
         <Product>Vonage.Server</Product>
     </PropertyGroup>
-
-    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-        <DocumentationFile>bin\Debug\Vonage.Server.xml</DocumentationFile>
-    </PropertyGroup>
-
-    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-        <DocumentationFile>bin\Release\Vonage.Server.xml</DocumentationFile>
-    </PropertyGroup>
-
     <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
         <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
     </PropertyGroup>
-
+    <PropertyGroup Condition="'$(Configuration)'!='ReleaseSigned'">
+        <PackageId>Vonage.Server</PackageId>
+    </PropertyGroup>
     <PropertyGroup Condition="'$(Configuration)'=='ReleaseSigned'">
         <PackageId>Vonage.Server.Signed</PackageId>
         <SignAssembly>true</SignAssembly>
         <AssemblyOriginatorKeyFile>../vonage.snk</AssemblyOriginatorKeyFile>
         <DelaySign>false</DelaySign>
-        <DocumentationFile>bin\ReleaseSigned\Vonage.Server.xml</DocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>
